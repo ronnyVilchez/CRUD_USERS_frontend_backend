@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <script defer src="./main.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>All Users</h1>
+        <button class="btAdd" type="button">Add New User</button>
+        <div class="read">
+            <table class="table">
+                <tr class="titles">
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Profile Picture</th>
+                    <th>Actions</th>
+                </tr>
+                <tbody class="userList">
+                    <!-- TABLAS CREADAS DESDE MAIN.JS -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="create">
+            <form class="formCreate">
+                <span class="closeBtCreate">&times;</span>
+                <h2>Create New User</h2>
+                <label for="nameCreate">Name:</label><input type="text" id="nameCreate" class="nameCreate">
+                <label for="emailCreate">Email:</label><input type="email" id="emailCreate" class="emailCreate">
+                <label for="passwordCreate">Password:</label><input type="password" id="passwordCreate"
+                    class="passwordCreate">
+                <label for="roleCreate">Role:</label>
+                <select id="roleCreate">
+                    <option value="supervisor">Supervisor</option>
+                    <option value="controller">Controller</option>
+                    <option value="maestro">Maestro</option>
+                </select>
+                <label for="profile_pictureCreate">Profile Picture:</label><input id="profile_pictureCreate"
+                    name="imagen" class="profile_pictureCreate" type="file"></input>
+                <button type="submit" class="saveChangeCreate">Save Changes</button>
+            </form>
+        </div>
+        <div class="update">
+            <form action="" class="formUpdate">
+                <span class="closeBtUpdate">&times;</span>
+                <h2>Edit User</h2>
+                <label for="nameUpdate">Name</label><input type="text" id="nameUpdate" class="nameUpdate">
+                <label for="emailUpdate">Email</label><input type="email" id="emailUpdate" class="emailUpdate">
+                <label for="passwordUpdate">New Password</label><input type="password" id="passwordUpdate"
+                    class="passwordUpdate">
+                <label for="roleUpdate">Role:</label>
+                <select id="roleUpdate" name="opcion">
+                    <option value="supervisor">Supervisor</option>
+                    <option value="controller">Controller</option>
+                    <option value="maestro">Maestro</option>
+                </select>
+                <label for="profile_pictureUpdate">Profile Picture:</label><input id="profile_pictureUpdate"
+                    name="imagen" class="profile_pictureUpdate" type="file"></input>
+                <button type="submit" class="saveChangeUpdate">Save Changes</button>
+            </form>
+        </div>
+    </div>
+    <div class="overlay">
+        <div class="divDelete">
+            <span class="closeBt">&times;</span>
+            <span>Are you sure you want to delete this user?</span>
+            <button class="btDeleteUser">Delete</button>
+        </div>
+    </div>
+</body>
+
+</html>
